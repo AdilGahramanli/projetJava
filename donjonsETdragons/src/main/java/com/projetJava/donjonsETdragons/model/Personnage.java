@@ -1,8 +1,9 @@
 package com.projetJava.donjonsETdragons.model;
 
 
+import java.io.Serializable;
 
-public class Personnage {
+public class Personnage implements Serializable {
 
 
     private int id;
