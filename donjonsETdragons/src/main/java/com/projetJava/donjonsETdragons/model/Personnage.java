@@ -1,12 +1,18 @@
 package com.projetJava.donjonsETdragons.model;
 
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
 import java.io.Serializable;
 
+
+@Entity
 public class Personnage implements Serializable {
 
 
-    private int id;
+    @Id
+    int id;
     private String name;
     private String type;
     private int life;
