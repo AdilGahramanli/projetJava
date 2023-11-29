@@ -5,10 +5,13 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 import java.io.Serializable;
+import com.fasterxml.jackson.annotation.JsonFilter;
+
+import jakarta.persistence.GeneratedValue;
 
 
 @Entity
-public class Personnage implements Serializable {
+public class Personnage {
 
 
     @Id
@@ -21,6 +24,10 @@ public class Personnage implements Serializable {
         this.name = name;
         this.type = type;
         this.life = life;
+    }
+
+    public Personnage() {
+
     }
 
     public int getId() {
