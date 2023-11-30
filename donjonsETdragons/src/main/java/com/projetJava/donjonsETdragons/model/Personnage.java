@@ -3,6 +3,11 @@ package com.projetJava.donjonsETdragons.model;
 
 import jakarta.persistence.*;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
 
 import java.io.Serializable;
 import com.fasterxml.jackson.annotation.JsonFilter;
@@ -22,7 +27,11 @@ public class Personnage {
 
     @Column(name="type")
     private String type;
+
+    @Column(name="points_de_vie")
     private int life;
+
+
     public Personnage(int id, String name, String type, int life) {
         this.id = id;
         this.name = name;
@@ -30,9 +39,9 @@ public class Personnage {
         this.life = life;
     }
 
-    public Personnage() {
-
-    }
+//    public Personnage() {
+//
+//    }
 
     public int getId() {
         return id;
@@ -66,13 +75,13 @@ public class Personnage {
         this.life = life;
     }
 
-    @Override
-    public String toString() {
-        return "Personnage{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", type='" + type + '\'' +
-                ", life=" + life +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Personnage{" +
+//                "id=" + id +
+//                ", name='" + name + '\'' +
+//                ", type='" + type + '\'' +
+//                ", life=" + life +
+//                '}';
+//    }
 }
