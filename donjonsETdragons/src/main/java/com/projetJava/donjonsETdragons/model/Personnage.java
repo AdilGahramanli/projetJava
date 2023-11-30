@@ -1,22 +1,26 @@
 package com.projetJava.donjonsETdragons.model;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
 
 import java.io.Serializable;
 import com.fasterxml.jackson.annotation.JsonFilter;
 
-import jakarta.persistence.GeneratedValue;
-
 
 @Entity
+@Table(name="tablePersonnage")
 public class Personnage {
 
 
     @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
     int id;
+
+    @Column(name="nom")
     private String name;
+
+    @Column(name="type")
     private String type;
     private int life;
     public Personnage(int id, String name, String type, int life) {
