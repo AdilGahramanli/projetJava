@@ -10,12 +10,12 @@ import java.util.List;
 @Repository
 public interface PersonnageDao extends JpaRepository<Personnage, Integer> {
 
-    List<Personnage> findAll();
-    Personnage findById(int id);
+//    List<Personnage> findAll();
+//    Personnage findById(int id);
 
-    Personnage save(Personnage personnage);
+//    Personnage save(Personnage personnage);
 
-    void delete(int id);
+//    void delete(int id);
 
 
 }

@@ -14,7 +14,7 @@ import com.fasterxml.jackson.annotation.JsonFilter;
 
 
 @Entity
-@Table(name="tablePersonnage")
+@Table(name="personnage")
 public class Personnage {
 
 
@@ -37,6 +37,10 @@ public class Personnage {
         this.name = name;
         this.type = type;
         this.life = life;
+    }
+
+    public Personnage() {
+
     }
 
 //    public Personnage() {
